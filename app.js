@@ -9,6 +9,8 @@ app.set('views', __dirname + '/views');
 app.engine('html', require('./helpers/simplate.js').__express);
 app.set('view engine', 'html');
 
+app.use(express.static(__dirname + '/public'));
+
 app.use(require('./controllers'));
 
 app.listen(port, function() {
