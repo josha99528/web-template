@@ -4,7 +4,7 @@ var SampleModel = require('../models/sample-model');
 
 router.get('/', function(req, res) {
     SampleModel.get(function(err, result) {
-        res.render('sample-view.html', {sampleVariable: result});
+        res.render('sample-view.html', {findReplace: {sampleVariable: result}});
     });
 });
 
